@@ -134,6 +134,7 @@ donde zₖ es la distancia en metros calculada a partir del sensor frontal.
 
 ### Escenario 1 — Entorno simple (pocos obstáculos)
 [Describir comportamiento, capturas de pantalla, muestras registradas]
+<video src="https://github.com/user-attachments/assets/d08adcfc-bf0e-4a4e-9dd8-2a4ad316326d" controls width="600">
 
 ### Escenario 2 — Entorno complejo (pasillos o múltiples obstáculos)
 [Describir comportamiento, capturas de pantalla, muestras registradas]
