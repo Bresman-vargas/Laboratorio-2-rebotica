@@ -1,0 +1,481 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Roughcast.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.4632741788010132 0.42138178760576017 -0.7796245406158153 1.8450040845606228
+  position -0.1477416606231785 1.4091765760656507 2.5717544020756833
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 1
+  floorTileSize 1 1
+}
+Solid {
+  translation 0.16 0.32 0
+  children [
+    Solid {
+      translation 0 0 0.05
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.52549 0.368627 0.235294
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.39 0.1 0.1
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.39 0.1 0.1
+      }
+    }
+  ]
+  name "wall"
+  model "wall"
+}
+Solid {
+  translation -0.15 -0.3 0
+  children [
+    Solid {
+      translation 0 0 0.05
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.52549 0.368627 0.235294
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.39 0.1 0.1
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.39 0.1 0.1
+      }
+    }
+  ]
+  name "wall(1)"
+  model "wall"
+}
+Solid {
+  translation 0.26 -0.3 0
+  children [
+    Wall {
+      translation 0.05 0.1 0
+      name "wall(1)"
+      size 0.1 0.1 0.1
+      appearance Roughcast {
+        colorOverride 0.52549 0.368627 0.235294
+        textureTransform TextureTransform {
+          scale 2.4 1
+        }
+      }
+    }
+    Solid {
+      translation 0 0 0.05
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.52549 0.368627 0.235294
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 0.1 0.1
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 0.1 0.1
+      }
+    }
+  ]
+}
+Solid {
+  translation -0.24 0.32 0
+  rotation 0 0 1 3.14159
+  children [
+    Wall {
+      translation 0.05 0.1 0
+      name "wall(1)"
+      size 0.1 0.1 0.1
+      appearance Roughcast {
+        colorOverride 0.52549 0.368627 0.235294
+        textureTransform TextureTransform {
+          scale 2.4 1
+        }
+      }
+    }
+    Solid {
+      translation 0 0 0.05
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.52549 0.368627 0.235294
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 0.1 0.1
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 0.1 0.1
+      }
+    }
+  ]
+  name "solid(1)"
+}
+Solid {
+  translation 0.95 0.4 0
+  rotation 0 0 -1 -1.5707953071795862
+  children [
+    Wall {
+      translation 0.05 0.1 0
+      name "wall(1)"
+      size 0.1 0.1 0.1
+      appearance Roughcast {
+        colorOverride 0.52549 0.368627 0.235294
+        textureTransform TextureTransform {
+          scale 2.4 1
+        }
+      }
+    }
+    Solid {
+      translation 0 0 0.05
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.52549 0.368627 0.235294
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 0.1 0.1
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 0.1 0.1
+      }
+    }
+  ]
+  name "solid(2)"
+}
+Solid {
+  translation 0.9 -0.45 0
+  rotation 0 0 1 -5.307179586466759e-06
+  children [
+    Wall {
+      translation 0.05 0.1 0
+      name "wall(1)"
+      size 0.1 0.1 0.1
+      appearance Roughcast {
+        colorOverride 0.52549 0.368627 0.235294
+        textureTransform TextureTransform {
+          scale 2.4 1
+        }
+      }
+    }
+    Solid {
+      translation 0 0 0.05
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.52549 0.368627 0.235294
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 0.1 0.1
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 0.1 0.1
+      }
+    }
+  ]
+  name "solid(3)"
+}
+Solid {
+  translation -0.95 -0.399995 0
+  rotation 0 0 1 -1.5708053071795867
+  children [
+    Wall {
+      translation 0.05 0.1 0
+      name "wall(1)"
+      size 0.1 0.1 0.1
+      appearance Roughcast {
+        colorOverride 0.52549 0.368627 0.235294
+        textureTransform TextureTransform {
+          scale 2.4 1
+        }
+      }
+    }
+    Solid {
+      translation 0 0 0.05
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.52549 0.368627 0.235294
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 0.1 0.1
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 0.1 0.1
+      }
+    }
+  ]
+  name "solid(4)"
+}
+Solid {
+  translation -0.899994 0.450005 0
+  rotation 0 0 1 3.14158
+  children [
+    Wall {
+      translation 0.05 0.1 0
+      name "wall(1)"
+      size 0.1 0.1 0.1
+      appearance Roughcast {
+        colorOverride 0.52549 0.368627 0.235294
+        textureTransform TextureTransform {
+          scale 2.4 1
+        }
+      }
+    }
+    Solid {
+      translation 0 0 0.05
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.52549 0.368627 0.235294
+            roughness 1
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/roughcast/roughcast_normal.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 2.4 1
+            }
+          }
+          geometry Box {
+            size 0.2 0.1 0.1
+          }
+        }
+      ]
+      boundingObject Box {
+        size 0.2 0.1 0.1
+      }
+    }
+  ]
+  name "solid(5)"
+}
+Wall {
+  translation -0.8 0.02 0
+  name "wall(7)"
+  size 0.2 0.2 0.1
+  appearance Roughcast {
+    colorOverride 0.52549 0.368627 0.235294
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0.81 0.02 0
+  name "wall(8)"
+  size 0.2 0.2 0.1
+  appearance Roughcast {
+    colorOverride 0.52549 0.368627 0.235294
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0.55 0.02 0
+  name "wall(5)"
+  size 0.1 0.4 0.1
+  appearance Roughcast {
+    colorOverride 0.52549 0.368627 0.235294
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation -0.55 0.02 0
+  name "wall(6)"
+  size 0.1 0.4 0.1
+  appearance Roughcast {
+    colorOverride 0.52549 0.368627 0.235294
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation -0.29 -0.05 0
+  name "wall(3)"
+  size 0.1 0.1 0.1
+  appearance Roughcast {
+    colorOverride 0.52549 0.368627 0.235294
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0.31 0.04 0
+  name "wall(4)"
+  size 0.1 0.1 0.1
+  appearance Roughcast {
+    colorOverride 0.52549 0.368627 0.235294
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0.55 0.45 0
+  name "wall(9)"
+  size 0.1 0.1 0.1
+  appearance Roughcast {
+    colorOverride 0.52549 0.368627 0.235294
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0.55 -0.45 0
+  name "wall(10)"
+  size 0.1 0.1 0.1
+  appearance Roughcast {
+    colorOverride 0.52549 0.368627 0.235294
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation -0.54 -0.45 0
+  name "wall(11)"
+  size 0.1 0.1 0.1
+  appearance Roughcast {
+    colorOverride 0.52549 0.368627 0.235294
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation -0.54 0.45 0
+  name "wall(12)"
+  size 0.1 0.1 0.1
+  appearance Roughcast {
+    colorOverride 0.52549 0.368627 0.235294
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+E-puck {
+  hidden position_0_0 1282.7036536561213
+  hidden position_0_1 1304.13988136163
+  hidden linearVelocity_0 -0.023061387028479756 0.07660716550949104 5.006859384809807e-05
+  hidden angularVelocity_0 -0.0027586473356956773 -0.00404354719211202 -0.0028562049216278957
+  hidden translation_1 0 0.026000000000000086 0.02
+  hidden rotation_1 0 1 0 0.9338509914856912
+  hidden linearVelocity_1 -0.023064135181526228 0.07665694752642298 -2.3234783208654843e-06
+  hidden angularVelocity_1 -3.8327274535719917 -1.1578754763707424 0.0005882728447176419
+  hidden translation_2 0 -0.025999999999999933 0.02
+  hidden rotation_2 0 -0.9999999999999999 0 2.762662531724055
+  hidden linearVelocity_2 -0.023123754865270817 0.07666465535005398 -1.4965265954625615e-05
+  hidden angularVelocity_2 -3.833308406682511 -1.1559444074660399 0.0022399639427958247
+  translation 0.43524519984027166 0.016625234503300383 -7.256130657066172e-05
+  rotation 0.00015558642407545055 -0.000550658378999824 -0.9999998362840937 -1.8634770920281891
+  controller "prueba-simple"
+  controllerArgs [
+    ""
+  ]
+}
