@@ -1,7 +1,7 @@
 # Laboratorio 2 — Navegación Reactiva con Filtrado y Fusión de Sensores en Webots
 
 **Asignatura:** ICI 4150 — Robótica y Sistemas Autónomos 2026-01  
-**Integrantes:** [Nombre 1] · [Nombre 2] · [Nombre 3]
+**Integrantes:** Bresman Garzón Vargas · Julián Silva Donoso · Vicente Mery Arancibia
 
 ---
 
@@ -117,7 +117,7 @@ donde zₖ es la distancia en metros calculada a partir del sensor frontal.
 ## Gráficos de Señales
 
 ### Señales crudas de sensores
-![Señales crudas](grafico_señales_crudas.png)
+![Grafico señales crudas](controllers/prueba-simple/grafico_señales_crudas.png)
 
 ### Comparación: crudo vs filtro simple vs Kalman
 ![Comparación filtros](grafico_comparacion_filtros.png)
@@ -135,6 +135,8 @@ donde zₖ es la distancia en metros calculada a partir del sensor frontal.
 ### Escenario 1 — Entorno simple (pocos obstáculos)
 [Describir comportamiento, capturas de pantalla, muestras registradas]
 <video src="https://github.com/user-attachments/assets/d08adcfc-bf0e-4a4e-9dd8-2a4ad316326d" controls width="600">
+Para el primer escenario, con seis paredes se hizo un pasillo estrecho con el objetivo de que el robot evualuase qué hacer al llegar al final del mismo.
+
 
 ### Escenario 2 — Entorno complejo (pasillos o múltiples obstáculos)
 [Describir comportamiento, capturas de pantalla, muestras registradas]
