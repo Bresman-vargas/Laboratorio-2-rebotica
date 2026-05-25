@@ -114,49 +114,83 @@ donde zₖ es la distancia en metros calculada a partir del sensor frontal.
 
 ---
 
+## Resultados por Escenario
+
+### Escenario 1 — Entorno simple (pocos obstáculos)
+[-]
+<video src="https://github.com/user-attachments/assets/d08adcfc-bf0e-4a4e-9dd8-2a4ad316326d" controls width="600">
+Para el primer escenario, con seis paredes se hizo un pasillo estrecho con el objetivo de que el robot evualuase qué hacer al llegar al final del mismo.
+
+1. **Estabilidad del movimiento**: El movimiento fue constante durante la simulación.
+2. **Cantidad de giros innecesarios**:0
+3. **Capacidad para evitar colisiones**:Alta, en ningún momento se observó una colisión.
+
 ## Gráficos de Señales
 
 ### Señales crudas de sensores
 ![Grafico señales crudas](controllers/prueba-simple/grafico_señales_crudas.png)
+- El primer gráfico representa los sensores frontales Ps7 y Ps0, tienen su punto más alto al final de la simulación cuando el robot se encuentra con la pared.
+- El segundo gráfico representa los sensores laterales Ps2 y Ps5, estos detectan paredes a lo largo del camino. Al llegar al final, detecta una colisión a la izquierda, por lo que ajusta la velocidad de las ruedas, luego detecta una colisión a la derecha y hace el mismo proceso.
+- El tercer gráfico representa la velocidad de las ruedas, las cuales al activarse los sensores laterales ajusta la velocidad de las ruedas, dimsinuyendo la velocidad de una de las dos para girar o invirtiendo la velocidad de una de las ruedas para rotar al robot. 
 
 ### Comparación: crudo vs filtro simple vs Kalman
-![Comparación filtros](grafico_comparacion_filtros.png)
+![Comparación filtros](controllers/prueba-simple/grafico_comparacion_filtros.png)
+- El gráfico presenta la medición cruda, con fitro simple y con filtro Kalman.
+- El filtro Kalman estima el estado del robot, por lo que en su punto más alto que es cuando el robot se encuentra encerrado, procede a moverse y corregir su curso para evitar la colisión.
+- En color naranja se encuentran los datos con un filtro simple intentando limpiar un poco el ruido de los sensores, presentan un comportamiento más inestable que el Kalman.
+
 
 ### Evolución de la ganancia de Kalman
-![Ganancia Kalman](grafico_ganancia_kalman.png)
+![Ganancia Kalman](controllers/prueba-simple/grafico_ganancia_kalman.png)
+- La ganancia de Kalman determina qué valor tomar en cuenta, si a los encoders en las ruedas o a los sensores, con el fin de estimar el estado del robot de la forma más fidedigna debido al ruido externo. Pero al ser una simulación "perfecta", esta converge de inmediato y se mantiene constante.
 
 ### Desplazamiento acumulado (encoders)
-![Encoders](grafico_encoders.png)
+![Encoders](controllers/prueba-simple/grafico_encoders.png)
+- El gráfico presenta el desplazamiento del robot a lo largo del tiempo, el cuál es casi lineal a excepción de las ocaciones en las que tiene que rotar. 
 
 ---
-
-## Resultados por Escenario
-
-### Escenario 1 — Entorno simple (pocos obstáculos)
-[Describir comportamiento, capturas de pantalla, muestras registradas]
-<video src="https://github.com/user-attachments/assets/d08adcfc-bf0e-4a4e-9dd8-2a4ad316326d" controls width="600">
-Para el primer escenario, con seis paredes se hizo un pasillo estrecho con el objetivo de que el robot evualuase qué hacer al llegar al final del mismo.
-
-
 ### Escenario 2 — Entorno complejo (pasillos o múltiples obstáculos)
-[Describir comportamiento, capturas de pantalla, muestras registradas]
+[-]
+<video src="https://github.com/user-attachments/assets/d8278d30-cc0f-499c-b648-7c1a0feabfb0" controls width="600">
+Para el siguiente escenario propusimos un entorno un poco más complicado, teniendo cinco obstáculos separados entre ellos con el objetivo de evaluar el comportamiento del robot con desplazamiento libre. 
 
----
+1. **Estabilidad del movimiento**: El movimiento tuvo un momento en el que se detuvo por un giro inncecesario.
+2. **Cantidad de giros innecesarios**: 2.
+3. **Capacidad para evitar colisiones**: Media, hubo una colisión no detectada.
 
-## Análisis y Conclusiones
+## Gráficos de Señales
 
-[Completar con observaciones del grupo sobre:]
-- Diferencias entre señal cruda, filtrada y estimada con Kalman
-- Estabilidad del movimiento con cada enfoque
-- Giros innecesarios observados
-- Efectividad en la evasión de obstáculos
+### Señales crudas de sensores
+![Grafico señales crudas](https://github.com/user-attachments/assets/40789554-879e-485e-9f13-ebae8ca65dc8)
+- El primer gráfico representa los sensores frontales Ps7 y Ps0, teniendo su punto más alto al detectar una colisión.
+- El segundo gráfico representa los sensores laterales Ps2 y Ps5, estos detectan paredes a lo largo del mapa, teniendo sus puntos más altos cuando una pared está lo suficientemente cerca. En el punto más alto hubo una colisión que, junto a un error en las físicas de la simulación registró un valor muy alto que no generó un movimiento en el robot, como se puede ver en la imagen.
+
+  
+![Colisión](https://github.com/user-attachments/assets/c3876628-8259-4bc7-8308-ef607ca37f1b)
+
+
+- El tercer gráfico representa la velocidad de las ruedas, las cuales al activarse los sensores laterales ajusta la velocidad de las ruedas, dimsinuyendo la velocidad de una de las dos para girar o invirtiendo la velocidad de una de las ruedas para rotar al robot. 
+
+### Comparación: crudo vs filtro simple vs Kalman
+![Comparación filtros](https://github.com/user-attachments/assets/6ffffab7-9813-435f-a2fa-4593896ca395)
+- El gráfico presenta la medición cruda, con fitro simple y con filtro Kalman.
+- El filtro Kalman estima el estado del robot, por lo que en su punto más alto que es cuando el robot se encuentra encerrado, procede a moverse y corregir su curso para evitar la colisión.
+- En color naranja se encuentran los datos con un filtro simple intentando limpiar un poco el ruido de los sensores, presentan un comportamiento más inestable que el Kalman.
+
+### Evolución de la ganancia de Kalman
+![Ganancia Kalman](https://github.com/user-attachments/assets/60b7cc45-7fc5-4c58-ad10-02a6f121ad13)
+- La ganancia de Kalman determina qué valor tomar en cuenta, si a los encoders en las ruedas o a los sensores, con el fin de estimar el estado del robot de la forma más fidedigna debido al ruido externo. Pero al ser una simulación "perfecta", esta converge de inmediato y se mantiene constante.
+
+### Desplazamiento acumulado (encoders)
+![Encoders](https://github.com/user-attachments/assets/3e88ca0e-cbf4-4a3b-bb3c-f8ebabc45a0d)
+- El gráfico presenta el desplazamiento del robot a lo largo del tiempo, el cuál es casi lineal a excepción de las ocaciones en las que tiene que rotar. 
 
 ---
 
 ## Instrucciones para Ejecutar la Simulación
 
-1. Abrir Webots y cargar el mundo `[nombre_mundo].wbt`.
-2. Asignar `laboratorio2_mejorado.py` como controlador del robot e-puck.
+1. Abrir Webots y cargar el mundo `lab-2.wbt` o `mapa-simple.wbt`.
+2. Asignar `prueba-simple.py` como controlador del robot e-puck.
 3. Iniciar la simulación.
 4. Al finalizar, se genera `señales_robot.csv` en la carpeta del controlador.
 5. Ejecutar el script de graficación:
